@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            // 関数を定義
+            function Sum() {
+                // input入力の値を取得
+                var number = document.getElementById("number").value;
+                var total = 0;
+                for (var i = 1 ; i <= number ; i++) {
+                    total += i;
+                }
+                // テキストの書き換え
+                document.getElementById("val").textContent = number;
+                document.getElementById("sum").textContent = total;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>1から<span id="val"></span>の合計は<span id="sum"></span></h2>
+        <input id="number" value="10" />
+        <button onclick="Sum()">合計</button>
+    </body>
+</html>
